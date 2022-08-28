@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+	<style>
+
+	</style>
+</head>
+     <style>
+        table {
+            border: 1px solid black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        button {
+            width: 100%;
+            padding: 20px 40px;
+            background-color: grey;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type="text"] {
+            padding: 20px 20px;
+            font-size: 20px;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+
+        .ans{
+        padding: 30px 30px;
+        }
+    </style>
+    <script>
+        function dis(val) {
+            document.getElementById("result").value += val
+        }
+
+        function clr() {
+            document.getElementById("result").value = ""
+        }
+    </script>
+</head>
+<body>
+<form method="post">
+    <table cellspacing="5">
+        <tr>
+            <td><button type="button" onclick="clr()">del</button></td><td colspan="3" > <input type="text" id="result" name="result" value="{{ answer }}"></td>
+        </tr>
+        <tr>
+           <td><button type="button" onclick="dis('1')">1</button></td><td><button type="button" onclick="dis('2')">2</button></td><td><button type="button" onclick="dis('3')">3</button></td><td><button type="button" onclick="dis('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="dis('4')">4</button></td><td><button type="button" onclick="dis('5')">5</button></td><td><button type="button" onclick="dis('6')">6</button></td><td><button type="button" onclick="dis('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="dis('7')">7</button></td><td><button type="button" onclick="dis('8')">8</button></td><td><button type="button" onclick="dis('9')">9</button></td><td><button type="button" onclick="dis('*')">*</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="dis('.')">.</button></td><td><button type="button" onclick="dis('0')">0</button></td><td><button type="submit">=</button></td><td><button type="button" onclick="dis('/')">/</button></td>
+        </tr>
+    </table>
+</form>
+
+
+</body>
+</html>
